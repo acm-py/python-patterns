@@ -97,6 +97,7 @@ def main() -> None:
     meow
 
     # A shop that sells random animals
+    >>> random.seed(1234)
     >>> shop = PetShop(random_animal)
     >>> for name in ["Max", "Jack", "Buddy"]:
     ...    pet = shop.buy_pet(name)
@@ -115,7 +116,7 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    random.seed(1234)  # for deterministic doctest outputs
+    # random.seed(1234)  # for deterministic doctest outputs
     import doctest
 
     doctest.testmod()
